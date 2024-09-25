@@ -1,7 +1,15 @@
-FROM ckan/ckan-base:2.10.4
+FROM ckan/ckan-base:2.11.0
 
 # Install any extensions needed by your CKAN instance
 # See Dockerfile.dev for more details and examples
+
+# PDF-view
+RUN pip install ckanext-pdfview 
+
+### Scheming ###
+RUN pip install -e 'git+https://github.com/roink/ckanext-scheming.git@master#egg=ckanext-scheming'
+
+RUN pip install ckanext-geoview
 
 # Copy custom initialization scripts
 COPY docker-entrypoint.d/* /docker-entrypoint.d/
