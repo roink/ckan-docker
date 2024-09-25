@@ -18,6 +18,9 @@ COPY docker-entrypoint.d/* /docker-entrypoint.d/
 # runtime mounted ones)
 COPY patches ${APP_DIR}/patches
 
+COPY logos/* ${APP_DIR}/src/ckan/ckan/public/base/images/
+RUN chmod -R 755 ${APP_DIR}/src/ckan/ckan/public/base/images/
+
 RUN for d in $APP_DIR/patches/*; do \
         if [ -d $d ]; then \
             for f in `ls $d/*.patch | sort -g`; do \
