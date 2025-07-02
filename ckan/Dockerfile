@@ -24,6 +24,11 @@ COPY ckanext-customfacets /usr/src/ckanext-customfacets
 # Install it in “editable” mode so the entry-point is registered
 RUN pip install -e /usr/src/ckanext-customfacets
 
+# Copy and install HESCOR-theme plugin
+COPY ckanext-hescortheme /usr/src/ckanext-hescortheme
+RUN pip install -e /usr/src/ckanext-hescortheme
+
+
 
 # Switch back to the ckan user
 USER ckan

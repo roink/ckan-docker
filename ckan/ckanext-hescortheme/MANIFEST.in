@@ -1,0 +1,2 @@
+recursive-include ckanext/hescortheme/public *
+recursive-include ckanext/hescortheme/templates *
