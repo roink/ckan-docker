@@ -17,6 +17,11 @@ RUN pip install ckanext-geoview
 COPY logos/* ${APP_DIR}/src/ckan/ckan/public/base/images/
 RUN chmod -R 755 ${APP_DIR}/src/ckan/ckan/public/base/images/
 
+# Install curl for startup scripts that use it
+RUN apt-get update && \
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+
 
 # Copy your local plugin into the image
 COPY ckanext-customfacets /usr/src/ckanext-customfacets
