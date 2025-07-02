@@ -12,6 +12,7 @@ if [ -d "$TEMPLATE_DIR" ]; then
   grep -rl "snippets/featured.html" "$TEMPLATE_DIR" 2>/dev/null | while read -r file; do
     echo "[remove_featured] cleaning $file"
     sed -i '/snippets\/featured.html/d' "$file"
+
   done
 
   FEATURED_FILE="$TEMPLATE_DIR/snippets/featured.html"

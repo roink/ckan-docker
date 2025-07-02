@@ -321,6 +321,25 @@ could be used instead of ckan/ckan-base:2.10.1
 
 Check out the wiki page for this: https://github.com/ckan/ckan-docker/wiki/Replacing-DataPusher-with-XLoader
 
+## 14. Custom search facets
+
+When using `ckanext-scheming` you may want the search sidebar to contain
+filters based on the custom fields defined in your dataset schema.  The
+Docker setup supports configuring facets via environment variables.  Add a
+`CKAN___SEARCH__FACETS` entry to your `.env` file similar to the example
+below:
+
+```bash
+CKAN___SEARCH__FACETS="{groups: 'Groups', tags: 'Tags', res_format: 'Formats', \
+subject: 'Data Pillar', geologicalTimeframes_geologicalTimeframe: 'Geological Timeframe(s)', \
+Regions_Region: 'Region(s)', FeatureTypes_FeatureType: 'Feature Type(s)'}"
+```
+
+Here the keys correspond to the field names indexed by CKAN.  For repeating
+fields defined with `repeating_subfields` use the combined field and
+subfield name as shown above.  Rebuild the containers after updating the
+environment file so the new facets appear in the search sidebar.
+
 Copying and License
 -------------------
 
