@@ -8,7 +8,5 @@ class CustomFacetsPlugin(plugins.SingletonPlugin):
     def dataset_facets(self, facets_dict, package_type):
         # keep existing facets, then add ours
         facets_dict['subject']              = toolkit._('Data Pillar')
-        facets_dict['geologicalTimeframes'] = toolkit._('Geological Timeframe(s)')
-        facets_dict['Regions']              = toolkit._('Region(s)')
-        facets_dict['FeatureTypes']         = toolkit._('Feature Type(s)')
+        facets_dict['language']             = toolkit._('Language') 
         return facets_dict
