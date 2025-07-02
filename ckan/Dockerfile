@@ -18,6 +18,13 @@ COPY logos/* ${APP_DIR}/src/ckan/ckan/public/base/images/
 RUN chmod -R 755 ${APP_DIR}/src/ckan/ckan/public/base/images/
 
 
+# Copy your local plugin into the image
+COPY ckanext-customfacets /usr/src/ckanext-customfacets
+
+# Install it in “editable” mode so the entry-point is registered
+RUN pip install -e /usr/src/ckanext-customfacets
+
+
 # Switch back to the ckan user
 USER ckan
 
