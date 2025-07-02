@@ -47,6 +47,7 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:5000"]
+      interval: 5s
     
   datapusher:
     networks:
@@ -75,6 +76,7 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}"]
+      interval: 5s
      
   solr:
     networks:
@@ -85,6 +87,7 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-qO", "/dev/null", "http://localhost:8983/solr/"]
+      interval: 5s
 
   redis:
     image: redis:${REDIS_VERSION}
@@ -93,7 +96,8 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "-e", "QUIT"]
-    
+      interval: 5s
+
 networks:
   webnet:
   ckannet:
