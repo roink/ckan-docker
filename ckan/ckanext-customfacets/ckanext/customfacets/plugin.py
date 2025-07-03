@@ -9,7 +9,6 @@ class CustomFacetsPlugin(plugins.SingletonPlugin):
 
     def dataset_facets(self, facets_dict, package_type):
         # keep existing facets, then add ours
-        facets_dict.clear()
         facets_dict['subject']              = toolkit._('Data Pillar')
         facets_dict['language']             = toolkit._('Language')
         facets_dict['keywords']             = toolkit._('Keywords')
