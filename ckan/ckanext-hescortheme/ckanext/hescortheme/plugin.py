@@ -20,11 +20,7 @@ class HescorTheme(SingletonPlugin):
         """
         here = os.path.dirname(__file__)
 
-        # 1) Serve our CSS/JS/images from public/
-        public_dir = os.path.join(here, 'public')
-        toolkit.add_public_directory(config, public_dir)
-
-        # 2) Serve our template overrides from templates/
+        # Serve our template overrides from templates/
         templates_dir = os.path.join(here, 'templates')
         toolkit.add_template_directory(config, templates_dir)
 
