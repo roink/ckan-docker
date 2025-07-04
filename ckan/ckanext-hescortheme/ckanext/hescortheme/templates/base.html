@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+{% block styles %}
+  {{ super() }}
+  {# Load our example_theme.css from the public/ directory #}
+  <link rel="stylesheet"
+        href="{{ h.url_for_static('hescortheme', 'example_theme.css') }}"
+        media="screen" />
+{% endblock %}
