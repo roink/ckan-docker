@@ -10,7 +10,8 @@ USER root
 RUN pip install ckanext-pdfview 
 
 ### Scheming ###
-RUN pip install -e 'git+https://github.com/roink/ckanext-scheming.git@master#egg=ckanext-scheming'
+COPY ckanext-scheming /usr/src/ckanext-scheming
+RUN pip install -e /usr/src/ckanext-scheming
 
 RUN pip install ckanext-geoview
 
