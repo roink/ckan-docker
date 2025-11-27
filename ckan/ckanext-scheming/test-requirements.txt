@@ -1,5 +1,0 @@
-beautifulsoup4
-factory-boy
-pytest
-pytest-ckan
-pytest-cov
