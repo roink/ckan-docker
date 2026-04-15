@@ -3,10 +3,11 @@ message: "If you use this HESCOR-specific fork, please cite it as below. Please 
 type: software
 title: "ckan-docker (HESCOR fork)"
 version: "v0.1.0"
-date-released: "2026-04-16"
+date-released: "2026-04-15"
 license: "AGPL-3.0"
 repository-code: "https://github.com/roink/ckan-docker"
 url: "https://github.com/roink/ckan-docker"
+doi: "10.5281/zenodo.19596459"
 
 authors:
   - family-names: "Schlüter"
