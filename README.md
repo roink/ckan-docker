@@ -1,4 +1,5 @@
 [![GitHub Org](https://img.shields.io/badge/GitHub-HESCOR-blue?logo=github&logoColor=white)](https://github.com/HESCOR)
+[![DOI](https://zenodo.org/badge/833670095.svg)](https://doi.org/10.5281/zenodo.19596459)
 # Docker Compose setup for CKAN
 
 
