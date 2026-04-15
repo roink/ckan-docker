@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this HESCOR-specific fork, please cite it as below. Please also acknowledge the upstream ckan/ckan-docker project where relevant."
+type: software
+title: "ckan-docker (HESCOR fork)"
+version: "v0.1.0"
+date-released: "2026-04-16"
+license: "AGPL-3.0"
+repository-code: "https://github.com/roink/ckan-docker"
+url: "https://github.com/roink/ckan-docker"
+
+authors:
+  - family-names: "Schlüter"
+    given-names: "Philipp"
+    orcid: "https://orcid.org/0009-0001-7947-5222"
+    affiliation: "University of Cologne"
+
+abstract: "HESCOR-specific fork of the upstream ckan/ckan-docker deployment setup, adapted for the HESCOR CKAN-based data portal/database infrastructure at the University of Cologne."
+
+keywords:
+  - "CKAN"
+  - "Docker"
+  - "research data management"
+  - "data portal"
+  - "HESCOR"
+
+references:
+  - type: software
+    title: "ckan-docker"
+    authors:
+      - name: "Open Knowledge Foundation and contributors"
+    repository-code: "https://github.com/ckan/ckan-docker"
+    url: "https://github.com/ckan/ckan-docker"
+    license: "AGPL-3.0"
