@@ -14,6 +14,10 @@ authors:
     given-names: "Philipp"
     orcid: "https://orcid.org/0009-0001-7947-5222"
     affiliation: "University of Cologne"
+  - family-names: "Robakiewicz"
+    given-names: "Elena"
+    orcid: "https://orcid.org/0000-0002-3399-3630"
+    affiliation: "University of Cologne"
 
 abstract: "HESCOR-specific fork of the upstream ckan/ckan-docker deployment setup, adapted for the HESCOR CKAN-based data portal/database infrastructure at the University of Cologne."
 
